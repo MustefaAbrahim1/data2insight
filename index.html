@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Data2Insight</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Hero -->
+  <section id="hero">
+    <canvas id="heroChart"></canvas>
+    <div class="hero-content">
+      <h1>Data2Insight</h1>
+      <p class="tagline">Transform data into strategic decisions</p>
+      <div class="cta-group">
+        <button class="btn primary" onclick="scrollToSection('projects')">See My Work</button>
+        <button class="btn outline" onclick="openModal()">Get in Touch</button>
+      </div>
+    </div>
+    <button id="toggleDark" class="dark-toggle">🌙</button>
+  </section>
+
+  <!-- Services -->
+  <section id="services">
+    <h2>Expert Services</h2>
+    <div class="services-grid">
+      <div class="service-card"><i class="icon-chart"></i><h3>Dashboards</h3><p>Custom, interactive analytics dashboards.</p></div>
+      <div class="service-card"><i class="icon-training"></i><h3>Training</h3><p>Hands-on courses in Python, SQL, visualization.</p></div>
+      <div class="service-card"><i class="icon-consult"></i><h3>Consulting</h3><p>Data strategy and project execution.</p></div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <h2>Featured Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <canvas id="chart1"></canvas>
+        <h4>Revenue Growth</h4>
+        <p>Monthly revenue trends with Chart.js</p>
+        <a href="#" target="_blank">View Code</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Training -->
+  <section id="training">
+    <h2>Training Programs</h2>
+    <div class="accordion">
+      <div class="item">
+        <button class="accordion-btn">Data Analysis with Python</button>
+        <div class="accordion-content"><p>8‑week in-depth data pipelines, Pandas, visualization.</p></div>
+      </div>
+      <div class="item">
+        <button class="accordion-btn">Dashboarding & Visualization</button>
+        <div class="accordion-content"><p>Hands-on course with Chart.js & Plotly.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Modal -->
+  <button id="contactBtn" class="floating-btn">💬</button>
+  <div id="contactModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h3>Contact Me</h3>
+      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="_replyto" placeholder="Your Email" required />
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn primary">Send</button>
+      </form>
+      <p>Or <a href="https://calendly.com/yourname" target="_blank">book a call</a></p>
+    </div>
+  </div>
+
+  <footer><p>&copy; 2025 Data2Insight. All Rights Reserved.</p></footer>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
